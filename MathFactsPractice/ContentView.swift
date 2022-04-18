@@ -68,9 +68,30 @@ struct ContentView: View {
                 }// VStack
                 
             } // ZStack
-                .navigationBarItems(trailing: SettingsButton(destination: UserSettingsView(userSettings: userSettings))).foregroundColor(Color.white)
+            .navigationTitle("MathFacts!")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button("First"){
+//                        print("First pushed")
+//                    }
+//                    .foregroundColor(Color.blue)
+
+                    SettingsButton(destination: UserSettingsView(userSettings: userSettings)).foregroundColor(Color.blue)
+                }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing){
+//                        Button(action: {}){
+//                            Image(systemName: "square.and.arrow.up")
+//                        }
+//                        .foregroundColor(Color.blue)
+                        
+                        CommunicationsButton(destination: CommunicationsView() )
+                            .foregroundColor(Color.blue)
+                    }
+                    
                 
-                .navigationBarTitle("MathFacts!")
+            }// toolbar
+            
             
         }// NavigationView
             .onTapGesture(count: 2){
@@ -101,10 +122,20 @@ struct ContentView: View {
         var destination: Destination
         
         var body: some View {
-            NavigationLink(destination: self.destination){Text("⚙︎").font(.largeTitle)}
+            HStack{
+            NavigationLink(destination: self.destination){Image(systemName:"gear")}
+        }
         }
     }
     
+struct CommunicationsButton<Destination: View>: View {
+    var destination: Destination
+    
+    var body: some View {
+        NavigationLink(destination:
+                        self.destination){Image(systemName: "square.and.arrow.up")}
+    }
+}
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()

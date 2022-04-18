@@ -36,7 +36,7 @@ struct ProblemButtonsScores: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
-                    .font(.custom("Arial", size: 20))
+                    .font(.custom("Arial", size: 18))
                 
                 Text("Score: \(addScore) / \(numAddProblems)")
                     .font(.custom("Arial", size: 15))
@@ -53,7 +53,7 @@ struct ProblemButtonsScores: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
-                    .font(.custom("Arial", size: 20))
+                    .font(.custom("Arial", size: 18))
                 
                 Text("Score: \(subScore) / \(numSubProblems)")
                     .font(.custom("Arial", size: 15))
@@ -71,7 +71,7 @@ struct ProblemButtonsScores: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
-                    .font(.custom("Arial", size: 20))
+                    .font(.custom("Arial", size: 18))
                 
                 Text("Score: \(mulScore) / \(numMulProblems)")
                     .font(.custom("Arial", size: 15))
@@ -89,7 +89,7 @@ struct ProblemButtonsScores: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
-                    .font(.custom("Arial", size: 20))
+                    .font(.custom("Arial", size: 18))
                 
                 Text("Score: \(divScore) / \(numDivProblems)")
                     .font(.custom("Arial", size: 15))
