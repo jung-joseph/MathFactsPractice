@@ -32,7 +32,7 @@ struct ProblemButtonsScores: View {
                     self.answerDisplay = "??"
                     self.mathModel.answerText = ""
                 }){Text("Addition")}
-                    .background(Color.red)
+                    .background(Color.green)
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
@@ -40,7 +40,7 @@ struct ProblemButtonsScores: View {
                 
                 Text("Score: \(addScore) / \(numAddProblems)")
                     .font(.custom("Arial", size: 15))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.green)
             }
             VStack {
                 Button (action: {
@@ -49,7 +49,7 @@ struct ProblemButtonsScores: View {
                     self.answerDisplay = "??"
                     self.mathModel.answerText = ""
                 }){Text("Subtraction")}
-                    .background(Color.red)
+                    .background(Color.blue)
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
@@ -57,7 +57,7 @@ struct ProblemButtonsScores: View {
                 
                 Text("Score: \(subScore) / \(numSubProblems)")
                     .font(.custom("Arial", size: 15))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.blue)
                 
             }
             VStack{
@@ -67,7 +67,7 @@ struct ProblemButtonsScores: View {
                     self.answerDisplay = "??"
                     self.mathModel.answerText = ""
                 }){Text("Multiplication")}
-                    .background(Color.red)
+                    .background(Color.orange)
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
@@ -75,7 +75,7 @@ struct ProblemButtonsScores: View {
                 
                 Text("Score: \(mulScore) / \(numMulProblems)")
                     .font(.custom("Arial", size: 15))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.orange)
             }
             
             VStack {
@@ -85,7 +85,7 @@ struct ProblemButtonsScores: View {
                     self.answerDisplay = "??"
                     self.mathModel.answerText = ""
                 }){Text("Division")}
-                    .background(Color.red)
+                    .background(Color.purple)
                     .foregroundColor(Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 10)
@@ -93,10 +93,12 @@ struct ProblemButtonsScores: View {
                 
                 Text("Score: \(divScore) / \(numDivProblems)")
                     .font(.custom("Arial", size: 15))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.purple)
                 
             }
-        }    }
+        }
+        
+    }
 }
 
 struct ProblemButtonsScores_Previews: PreviewProvider {

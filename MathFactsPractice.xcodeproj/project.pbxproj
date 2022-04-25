@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		530B9509280E035D004260B7 /* CommunicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B9508280E035D004260B7 /* CommunicationsView.swift */; };
+		530B950C2810765E004260B7 /* Comms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B950B2810765E004260B7 /* Comms.swift */; };
 		5321FE9328076E3200F970A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5321FE9228076E3200F970A7 /* Assets.xcassets */; };
 		53D564B528075B6F0021894B /* MathFactsPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D564B428075B6F0021894B /* MathFactsPracticeApp.swift */; };
 		53D564BC28075B710021894B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D564BB28075B710021894B /* Preview Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		530B9508280E035D004260B7 /* CommunicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationsView.swift; sourceTree = "<group>"; };
+		530B950B2810765E004260B7 /* Comms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comms.swift; sourceTree = "<group>"; };
 		5321FE9228076E3200F970A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		53D564B128075B6F0021894B /* MathFactsPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathFactsPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D564B428075B6F0021894B /* MathFactsPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFactsPracticeApp.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530B950A28107498004260B7 /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+				530B950B2810765E004260B7 /* Comms.swift */,
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
 		53D564A828075B6E0021894B = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 				53D564D428075BFE0021894B /* SubSettingsView.swift */,
 				53D564D628075C060021894B /* MulSettingsView.swift */,
 				53D564D828075C100021894B /* DivSettingsView.swift */,
+				530B950A28107498004260B7 /* Communications */,
 				5321FE9228076E3200F970A7 /* Assets.xcassets */,
 				53D564BA28075B710021894B /* Preview Content */,
 			);
@@ -185,6 +196,7 @@
 				53D564CD28075BDA0021894B /* UserSettings.swift in Sources */,
 				53D564CB28075BD00021894B /* UserSettingsView.swift in Sources */,
 				53D564B528075B6F0021894B /* MathFactsPracticeApp.swift in Sources */,
+				530B950C2810765E004260B7 /* Comms.swift in Sources */,
 				53D564D928075C100021894B /* DivSettingsView.swift in Sources */,
 				53D564D528075BFE0021894B /* SubSettingsView.swift in Sources */,
 			);

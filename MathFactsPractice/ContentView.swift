@@ -28,7 +28,7 @@ struct ContentView: View {
     @State private var newProblem: Bool = true
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.blue]
         mathModel.initialize(userSettings: userSettings)
     }
     
@@ -38,18 +38,21 @@ struct ContentView: View {
         NavigationView{
             ZStack{
                 //Define the screen Color
-                Color.black
-                    // Extend the screen to all edges
+                Color.white
+                // Extend the screen to all edges
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack{
                     
                     ProblemButtonsScores(userSettings: userSettings, mathModel: mathModel, answerDisplay: $answerDisplay, addScore: $addScore, subScore: $subScore, mulScore: $mulScore, divScore: $divScore, numAddProblems: $numAddProblems, numSubProblems: $numSubProblems, numMulProblems: $numMulProblems, numDivProblems: $numDivProblems)
                     
+                    Spacer()
+                        .frame(height: 25)
+                    
                     ProblemView(mathModel: mathModel, answerDisplay: $answerDisplay,fontSize: 50)
                     
                     
-                    TextField("Answer", text: $mathModel.answerText).textFieldStyle(RoundedBorderTextFieldStyle()).padding().font(.custom("Arial", size: 40)).foregroundColor(Color.red)
+                    TextField("Answer(tap for keyboard)", text: $mathModel.answerText).textFieldStyle(RoundedBorderTextFieldStyle()).padding().font(.custom("Arial", size: 25)).foregroundColor(Color.red)
                         .keyboardType(.numbersAndPunctuation)
                     
                     AnswerButton(mathModel: mathModel, answerDisplay: $answerDisplay, rightWrong: $rightWrong, newProblem: $newProblem, addScore: $addScore, subScore: $subScore, mulScore: $mulScore, divScore: $divScore, numAddProblems: $numAddProblems, numSubProblems: $numSubProblems, numMulProblems: $numMulProblems, numDivProblems: $numDivProblems)
@@ -57,7 +60,7 @@ struct ContentView: View {
                     
                     Text("Double Tap Anywhere For the Next Problem")
                         .font(.body)
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.pink)
                         .lineLimit(nil)
                         .multilineTextAlignment(.center)
                     
@@ -68,66 +71,63 @@ struct ContentView: View {
                 }// VStack
                 
             } // ZStack
-            .navigationTitle("MathFacts!")
+            //
+            .navigationBarTitle("MathFacts!")
+            
+            //
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-//                    Button("First"){
-//                        print("First pushed")
-//                    }
-//                    .foregroundColor(Color.blue)
-
+                    
+                    
                     SettingsButton(destination: UserSettingsView(userSettings: userSettings)).foregroundColor(Color.blue)
                 }
+                
+                ToolbarItem(placement: .navigationBarTrailing){
                     
-                    ToolbarItem(placement: .navigationBarTrailing){
-//                        Button(action: {}){
-//                            Image(systemName: "square.and.arrow.up")
-//                        }
-//                        .foregroundColor(Color.blue)
-                        
-                        CommunicationsButton(destination: CommunicationsView() )
-                            .foregroundColor(Color.blue)
-                    }
                     
+                    CommunicationsButton(destination: CommunicationsView(addScore: addScore, numAddProblems: numAddProblems, subScore: subScore, numSubProblems: numSubProblems, mulScore: mulScore, numMulProblems: numMulProblems, divScore: divScore, numDivProblems: numDivProblems, level: userSettings.level) )
+                        .foregroundColor(Color.blue)
+                }
+                
                 
             }// toolbar
             
             
         }// NavigationView
-            .onTapGesture(count: 2){
-                print("Tapped!")
-                if self.mathModel.problemType == "Addition" {
-                    self.mathModel.addition(userSettings: self.userSettings)
-                } else if self.mathModel.problemType == "Subtraction" {
-                    self.mathModel.subtraction(userSettings: self.userSettings)
-                } else if self.mathModel.problemType == "Multiplication" {
-                    self.mathModel.multiplication(userSettings: self.userSettings)
-                } else if self.mathModel.problemType == "Division" {
-                    self.mathModel.division(userSettings: self.userSettings)
-                } else {
-                    fatalError("Fatal Error")
-                }
-                
-                self.answerDisplay = "??"
-                self.mathModel.answerText = ""
-                self.newProblem = true
-                self.rightWrong = ""
+        .onTapGesture(count: 2){
+            print("Tapped!")
+            if self.mathModel.problemType == "Addition" {
+                self.mathModel.addition(userSettings: self.userSettings)
+            } else if self.mathModel.problemType == "Subtraction" {
+                self.mathModel.subtraction(userSettings: self.userSettings)
+            } else if self.mathModel.problemType == "Multiplication" {
+                self.mathModel.multiplication(userSettings: self.userSettings)
+            } else if self.mathModel.problemType == "Division" {
+                self.mathModel.division(userSettings: self.userSettings)
+            } else {
+                fatalError("Fatal Error")
+            }
+            
+            self.answerDisplay = "??"
+            self.mathModel.answerText = ""
+            self.newProblem = true
+            self.rightWrong = ""
         }
         
         
     }
 }// ContentView
+
+struct SettingsButton<Destination : View>: View {
+    var destination: Destination
     
-    struct SettingsButton<Destination : View>: View {
-        var destination: Destination
-        
-        var body: some View {
-            HStack{
+    var body: some View {
+        HStack{
             NavigationLink(destination: self.destination){Image(systemName:"gear")}
         }
-        }
     }
-    
+}
+
 struct CommunicationsButton<Destination: View>: View {
     var destination: Destination
     
@@ -136,8 +136,8 @@ struct CommunicationsButton<Destination: View>: View {
                         self.destination){Image(systemName: "square.and.arrow.up")}
     }
 }
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

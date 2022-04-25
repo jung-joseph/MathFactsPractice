@@ -20,14 +20,63 @@ struct UserSettingsView: View {
         
 //        NavigationView {
             VStack{
+                
+                Button(action:{
+                    userSettings.level = "Elementry"
+                    userSettings.addMinNumber = 0
+                    userSettings.addMaxNumber = 10
+                    
+                    userSettings.subMinNumber = 0
+                    userSettings.subMaxNumber = 10
+                    
+                    userSettings.mulMinNumber = 0
+                    userSettings.mulMaxNumber = 10
+                    
+                    userSettings.divMinNumber = 0
+                    userSettings.divMaxNumber = 10
+                    
+                    userSettings.printUserSettings()
+                    
+                },
+                       label: {Text("Elementry Level")})
+                .background(Color.red)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+                .shadow(radius: 10)
+                .font(.custom("Arial", size: 18))
+                .padding()
+                
+                Button(action:{
+                    userSettings.level = "High School"
+                    userSettings.addMinNumber = 0
+                    userSettings.addMaxNumber = 12
+                    
+                    userSettings.subMinNumber = -12
+                    userSettings.subMaxNumber = 12
+                    
+                    userSettings.mulMinNumber = -12
+                    userSettings.mulMaxNumber = 12
+                    
+                    userSettings.divMinNumber = -12
+                    userSettings.divMaxNumber = 12
+                    
+                    userSettings.printUserSettings()
+
+                },
+                       label: {Text("High School Level")})
+                .background(Color.red)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+                .shadow(radius: 10)
+                .font(.custom("Arial", size: 18))
                 Spacer()
-                AddSettingsView(userSettings: userSettings, min: min, max: max)
-                
-                SubSettingsView(userSettings: userSettings, min: min, max: max)
-                
-                MulSettingsView(userSettings: userSettings, min: min, max: max)
-                
-                DivSettingsView(userSettings: userSettings, min: min, max: max)
+//                AddSettingsView(userSettings: userSettings, min: min, max: max)
+//
+//                SubSettingsView(userSettings: userSettings, min: min, max: max)
+//
+//                MulSettingsView(userSettings: userSettings, min: min, max: max)
+//
+//                DivSettingsView(userSettings: userSettings, min: min, max: max)
                 
                 Spacer()
 
