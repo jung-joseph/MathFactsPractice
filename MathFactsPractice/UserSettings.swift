@@ -11,7 +11,7 @@ import SwiftUI
 
 class UserSettings: ObservableObject {
     
-    @Published var level: String = "Elementry"
+    @Published var level: String = "Elementary"
     @Published var addMinNumber: Double = 0
     @Published var addMaxNumber: Double = 10
     @Published var subMinNumber: Double = 0

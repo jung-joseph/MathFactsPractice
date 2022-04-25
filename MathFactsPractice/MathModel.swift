@@ -30,12 +30,12 @@ class MathModel: ObservableObject {
     
     func initialize(userSettings: UserSettings){
         if problemType == "Addition"{
-            number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
-            number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
+            number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
+            number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
             number3 = number1 + number2
         } else if problemType == "Subtraction" {
-            number1 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber + 1))
-            number2 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber + 1))
+            number1 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber))
+            number2 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber))
             if userSettings.subMinNumber >= 0 && number2 > number1 {
                 let temp = number1
                 number1 = number2
@@ -44,12 +44,12 @@ class MathModel: ObservableObject {
             number3 = number1 - number2
             
         } else if problemType == "Multiplication" {
-            number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
-             number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
+            number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
+             number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
              number3 = number1 * number2
         } else if problemType == "Division" {
-            number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
-            number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
+            number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
+            number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
             number3 = number1 * number2
             // number3 = quotient
             //number2 = divisor
@@ -70,13 +70,13 @@ class MathModel: ObservableObject {
     }
 
     func addition(userSettings: UserSettings){
-        number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
-        number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber + 1))
+        number1 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
+        number2 = Int.random(in: Int(userSettings.addMinNumber)...Int(userSettings.addMaxNumber))
         number3 = number1 + number2
     }
     func subtraction(userSettings: UserSettings){
-        number1 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber + 1))
-        number2 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber + 1))
+        number1 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber))
+        number2 = Int.random(in: Int(userSettings.subMinNumber)...Int(userSettings.subMaxNumber))
         if userSettings.subMinNumber >= 0 && number2 > number1 {
             let temp = number1
             number1 = number2
@@ -85,13 +85,13 @@ class MathModel: ObservableObject {
         number3 = number1 - number2
     }
     func multiplication(userSettings: UserSettings) {
-        number1 = Int.random(in: Int(userSettings.mulMinNumber)...Int(userSettings.mulMaxNumber + 1))
-        number2 = Int.random(in: Int(userSettings.mulMinNumber)...Int(userSettings.mulMaxNumber + 1))
+        number1 = Int.random(in: Int(userSettings.mulMinNumber)...Int(userSettings.mulMaxNumber))
+        number2 = Int.random(in: Int(userSettings.mulMinNumber)...Int(userSettings.mulMaxNumber))
         number3 = number1 * number2
     }
     func division(userSettings: UserSettings) {
-        number1 = Int.random(in: Int(userSettings.divMinNumber)...Int(userSettings.divMaxNumber + 1))
-        number2 = Int.random(in: Int(userSettings.divMinNumber)...Int(userSettings.divMaxNumber + 1))
+        number1 = Int.random(in: Int(userSettings.divMinNumber)...Int(userSettings.divMaxNumber))
+        number2 = Int.random(in: Int(userSettings.divMinNumber)...Int(userSettings.divMaxNumber))
         number3 = number1 * number2
         // number3 = quotient
         //number2 = divisor

@@ -11,82 +11,88 @@ import SwiftUI
 struct UserSettingsView: View {
     
     @ObservedObject var userSettings: UserSettings
-
+    
     
     var min: Double = -50
     var max: Double = 50
     
     var body: some View {
         
-//        NavigationView {
-            VStack{
-                
-                Button(action:{
-                    userSettings.level = "Elementry"
-                    userSettings.addMinNumber = 0
-                    userSettings.addMaxNumber = 10
-                    
-                    userSettings.subMinNumber = 0
-                    userSettings.subMaxNumber = 10
-                    
-                    userSettings.mulMinNumber = 0
-                    userSettings.mulMaxNumber = 10
-                    
-                    userSettings.divMinNumber = 0
-                    userSettings.divMaxNumber = 10
-                    
-                    userSettings.printUserSettings()
-                    
-                },
-                       label: {Text("Elementry Level")})
-                .background(Color.red)
-                .foregroundColor(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 10)
-                .font(.custom("Arial", size: 18))
-                .padding()
-                
-                Button(action:{
-                    userSettings.level = "High School"
-                    userSettings.addMinNumber = 0
-                    userSettings.addMaxNumber = 12
-                    
-                    userSettings.subMinNumber = -12
-                    userSettings.subMaxNumber = 12
-                    
-                    userSettings.mulMinNumber = -12
-                    userSettings.mulMaxNumber = 12
-                    
-                    userSettings.divMinNumber = -12
-                    userSettings.divMaxNumber = 12
-                    
-                    userSettings.printUserSettings()
-
-                },
-                       label: {Text("High School Level")})
-                .background(Color.red)
-                .foregroundColor(Color.white)
-                .cornerRadius(10)
-                .shadow(radius: 10)
-                .font(.custom("Arial", size: 18))
-                Spacer()
-//                AddSettingsView(userSettings: userSettings, min: min, max: max)
-//
-//                SubSettingsView(userSettings: userSettings, min: min, max: max)
-//
-//                MulSettingsView(userSettings: userSettings, min: min, max: max)
-//
-//                DivSettingsView(userSettings: userSettings, min: min, max: max)
-                
-                Spacer()
-
-
-            }
-//        .navigationBarTitle(Text("User Settings"))
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-//                .edgesIgnoringSafeArea(.all)
+        //        NavigationView {
+        VStack{
             
-//        }
+            Button(action:{
+                userSettings.level = "Elementary"
+                userSettings.addMinNumber = 0
+                userSettings.addMaxNumber = 10
+                
+                userSettings.subMinNumber = 0
+                userSettings.subMaxNumber = 10
+                
+                userSettings.mulMinNumber = 0
+                userSettings.mulMaxNumber = 10
+                
+                userSettings.divMinNumber = 0
+                userSettings.divMaxNumber = 10
+                
+                userSettings.printUserSettings()
+                
+            },
+                   label: {Text("Elementary Level")})
+            .background(Color.red)
+            .foregroundColor(Color.white)
+            .cornerRadius(10)
+            .shadow(radius: 10)
+            .font(.custom("Arial", size: 18))
+            .padding()
+            
+            Button(action:{
+                userSettings.level = "High School"
+                userSettings.addMinNumber = 0
+                userSettings.addMaxNumber = 12
+                
+                userSettings.subMinNumber = -12
+                userSettings.subMaxNumber = 12
+                
+                userSettings.mulMinNumber = -12
+                userSettings.mulMaxNumber = 12
+                
+                userSettings.divMinNumber = -12
+                userSettings.divMaxNumber = 12
+                
+                userSettings.printUserSettings()
+                
+            },
+                   label: {Text("High School Level")})
+            .background(Color.green)
+            .foregroundColor(Color.white)
+            .cornerRadius(10)
+            .shadow(radius: 10)
+            .font(.custom("Arial", size: 18))
+            
+            Spacer()
+            
+            Group{
+                Text("Elementary Level:")
+                Text("Addends, minuends, subtrahends, multiplicands, multipliers, divisors, and quotients are between 0 and 10.")
+                Text("In addition, the minuend is greater than or equal to the subtrahend so there are no negative differences.")
+            }
+            .foregroundColor(Color.red)
+            Group{
+                Text("High School Level:")
+                Text("Addends, minuends, subtrahends, multiplicands, multipliers, divisors, and quotients are between -12 and 12.")
+            }
+            .foregroundColor(Color.green
+            )
+            Spacer()
+            
+            
+        }
+        //        .navigationBarTitle(Text("User Settings"))
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        //                .edgesIgnoringSafeArea(.all)
+        
+        //        }
     }
 }
 #if DEBUG

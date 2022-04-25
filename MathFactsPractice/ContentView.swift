@@ -46,6 +46,22 @@ struct ContentView: View {
                     
                     ProblemButtonsScores(userSettings: userSettings, mathModel: mathModel, answerDisplay: $answerDisplay, addScore: $addScore, subScore: $subScore, mulScore: $mulScore, divScore: $divScore, numAddProblems: $numAddProblems, numSubProblems: $numSubProblems, numMulProblems: $numMulProblems, numDivProblems: $numDivProblems)
                     
+                    Button (action:{
+                        addScore = 0
+                        numAddProblems = 0
+                        subScore = 0
+                        numSubProblems = 0
+                        mulScore = 0
+                        numMulProblems = 0
+                        divScore = 0
+                        numDivProblems = 0
+                    }){Text("Reset Scores")}
+                        .background(Color.yellow)
+                        .foregroundColor(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                        .font(.custom("Arial", size: 18))
+                    
                     Spacer()
                         .frame(height: 25)
                     
@@ -79,7 +95,9 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     
                     
-                    SettingsButton(destination: UserSettingsView(userSettings: userSettings)).foregroundColor(Color.blue)
+                    SettingsButton(destination: UserSettingsView(userSettings: userSettings))
+                        .foregroundColor(Color.blue)
+                        .disabled(!(numAddProblems + numSubProblems + numMulProblems + numDivProblems == 0))
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing){

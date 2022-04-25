@@ -85,6 +85,6 @@ struct CommunicationsView: View {
 
 struct CommunicationsView_Previews: PreviewProvider {
     static var previews: some View {
-        CommunicationsView(addScore: 2, numAddProblems: 2,subScore: 2, numSubProblems: 2,mulScore: 2,numMulProblems: 2, divScore: 2,numDivProblems: 2, level: "Elementry")
+        CommunicationsView(addScore: 2, numAddProblems: 2,subScore: 2, numSubProblems: 2,mulScore: 2,numMulProblems: 2, divScore: 2,numDivProblems: 2, level: "Elementary")
     }
 }
