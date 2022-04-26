@@ -41,6 +41,7 @@ struct UserSettingsView: View {
                    label: {Text("Elementary Level")})
             .background(Color.red)
             .foregroundColor(Color.white)
+            .padding(.horizontal, 4)
             .cornerRadius(10)
             .shadow(radius: 10)
             .font(.custom("Arial", size: 18))
@@ -66,6 +67,7 @@ struct UserSettingsView: View {
                    label: {Text("High School Level")})
             .background(Color.green)
             .foregroundColor(Color.white)
+            .padding(.horizontal, 4)
             .cornerRadius(10)
             .shadow(radius: 10)
             .font(.custom("Arial", size: 18))
@@ -82,8 +84,12 @@ struct UserSettingsView: View {
                 Text("High School Level:")
                 Text("Addends, minuends, subtrahends, multiplicands, multipliers, divisors, and quotients are between -12 and 12.")
             }
-            .foregroundColor(Color.green
-            )
+            .foregroundColor(Color.green)
+            Group{
+                Text("Note:")
+                Text("Users are allowed to change these levels only at the start of using the app or after resetting the scores.")
+            }
+            
             Spacer()
             
             
