@@ -11,7 +11,7 @@ import SwiftUI
 struct UserSettingsView: View {
     
     @ObservedObject var userSettings: UserSettings
-    
+    @State private var showingSheet = false
     
     var min: Double = -50
     var max: Double = 50
@@ -49,7 +49,7 @@ struct UserSettingsView: View {
             
             Button(action:{
                 userSettings.level = "High School"
-                userSettings.addMinNumber = 0
+                userSettings.addMinNumber = -12
                 userSettings.addMaxNumber = 12
                 
                 userSettings.subMinNumber = -12
@@ -66,6 +66,26 @@ struct UserSettingsView: View {
             },
                    label: {Text("High School Level")})
             .background(Color.green)
+            .foregroundColor(Color.white)
+            .padding(.horizontal, 4)
+            .cornerRadius(10)
+            .shadow(radius: 10)
+            .font(.custom("Arial", size: 18))
+            .padding()
+            
+            Button(action: {
+                userSettings.level = "Custom Settings"
+                showingSheet.toggle()
+                userSettings.printUserSettings()
+
+            }, label: {Text("Custom Settings") })
+//            Button("Custom Settings"){
+//                showingSheet.toggle()
+//            }
+            .sheet(isPresented: $showingSheet) {
+                CustomSettingsView(userSettings: userSettings)
+            }
+            .background(Color.blue)
             .foregroundColor(Color.white)
             .padding(.horizontal, 4)
             .cornerRadius(10)
@@ -91,7 +111,13 @@ struct UserSettingsView: View {
             }
             
             Spacer()
-            
+            //                AddSettingsView(userSettings: userSettings, min: min, max: max)
+            //
+            //                SubSettingsView(userSettings: userSettings, min: min, max: max)
+            //
+            //                MulSettingsView(userSettings: userSettings, min: min, max: max)
+            //
+            //                DivSettingsView(userSettings: userSettings, min: min, max: max)
             
         }
         //        .navigationBarTitle(Text("User Settings"))

@@ -21,7 +21,7 @@ struct DivSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.purple)
-                Slider(value: $userSettings.divMinNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.divMinNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.purple)
                 
             }
@@ -32,7 +32,7 @@ struct DivSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.purple)
-                Slider(value: $userSettings.divMaxNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.divMaxNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.purple)
                 
             }

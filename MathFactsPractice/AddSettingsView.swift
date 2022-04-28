@@ -22,7 +22,7 @@ struct AddSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.red)
-                Slider(value: $userSettings.addMinNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.addMinNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.red)
 
             }
@@ -33,7 +33,7 @@ struct AddSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.red)
-                Slider(value: $userSettings.addMaxNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.addMaxNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.red)
 
             }

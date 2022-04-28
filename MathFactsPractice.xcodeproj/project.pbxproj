@@ -10,6 +10,7 @@
 		530B9509280E035D004260B7 /* CommunicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B9508280E035D004260B7 /* CommunicationsView.swift */; };
 		530B950C2810765E004260B7 /* Comms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530B950B2810765E004260B7 /* Comms.swift */; };
 		5321FE9328076E3200F970A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5321FE9228076E3200F970A7 /* Assets.xcassets */; };
+		532EA8AA28188BE300F78481 /* CustomSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532EA8A928188BE300F78481 /* CustomSettingsView.swift */; };
 		53D564B528075B6F0021894B /* MathFactsPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D564B428075B6F0021894B /* MathFactsPracticeApp.swift */; };
 		53D564BC28075B710021894B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D564BB28075B710021894B /* Preview Assets.xcassets */; };
 		53D564C328075BA60021894B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D564C228075BA60021894B /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 		530B9508280E035D004260B7 /* CommunicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationsView.swift; sourceTree = "<group>"; };
 		530B950B2810765E004260B7 /* Comms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comms.swift; sourceTree = "<group>"; };
 		5321FE9228076E3200F970A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
+		532EA8A928188BE300F78481 /* CustomSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsView.swift; sourceTree = "<group>"; };
 		53D564B128075B6F0021894B /* MathFactsPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathFactsPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D564B428075B6F0021894B /* MathFactsPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFactsPracticeApp.swift; sourceTree = "<group>"; };
 		53D564BB28075B710021894B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				53D564C628075BBC0021894B /* ProblemView.swift */,
 				53D564C828075BC70021894B /* RightWrongView.swift */,
 				530B9508280E035D004260B7 /* CommunicationsView.swift */,
+				532EA8A928188BE300F78481 /* CustomSettingsView.swift */,
 				53D564CA28075BD00021894B /* UserSettingsView.swift */,
 				53D564CC28075BDA0021894B /* UserSettings.swift */,
 				53D564CE28075BE30021894B /* ProblemButtonsScores.swift */,
@@ -194,6 +197,7 @@
 				53D564D728075C060021894B /* MulSettingsView.swift in Sources */,
 				53D564D128075BEC0021894B /* AnswerButton.swift in Sources */,
 				53D564CD28075BDA0021894B /* UserSettings.swift in Sources */,
+				532EA8AA28188BE300F78481 /* CustomSettingsView.swift in Sources */,
 				53D564CB28075BD00021894B /* UserSettingsView.swift in Sources */,
 				53D564B528075B6F0021894B /* MathFactsPracticeApp.swift in Sources */,
 				530B950C2810765E004260B7 /* Comms.swift in Sources */,

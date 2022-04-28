@@ -74,7 +74,7 @@ struct ContentView: View {
                     AnswerButton(mathModel: mathModel, answerDisplay: $answerDisplay, rightWrong: $rightWrong, newProblem: $newProblem, addScore: $addScore, subScore: $subScore, mulScore: $mulScore, divScore: $divScore, numAddProblems: $numAddProblems, numSubProblems: $numSubProblems, numMulProblems: $numMulProblems, numDivProblems: $numDivProblems)
                     
                     
-                    Text("Double Tap Anywhere For the Next Problem")
+                    Text("Double Tap Anywhere For The Next Problem")
                         .font(.body)
                         .foregroundColor(Color.pink)
                         .lineLimit(nil)

@@ -21,7 +21,7 @@ struct SubSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.green)
-                Slider(value: $userSettings.subMinNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.subMinNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.green)
 
             }
@@ -32,7 +32,7 @@ struct SubSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.green)
-                Slider(value: $userSettings.subMaxNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.subMaxNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.green)
 
             }

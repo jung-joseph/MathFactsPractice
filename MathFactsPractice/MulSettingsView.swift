@@ -21,7 +21,7 @@ struct MulSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.yellow)
-                Slider(value: $userSettings.mulMinNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.mulMinNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.yellow)
                 
             }
@@ -32,7 +32,7 @@ struct MulSettingsView: View {
             }
             HStack{
                 Text(String(format: "%.0f", min)).foregroundColor(Color.yellow)
-                Slider(value: $userSettings.mulMaxNumber, in: min...max, step: 5 )
+                Slider(value: $userSettings.mulMaxNumber, in: min...max, step: 1 )
                 Text(String(format: "%.0f", max)).foregroundColor(Color.yellow)
                 
             }
