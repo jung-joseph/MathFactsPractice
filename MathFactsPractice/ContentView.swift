@@ -61,11 +61,12 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .shadow(radius: 10)
                         .font(.custom("Arial", size: 18))
+                        .padding(.top, 10)
                     
                     Spacer()
                         .frame(height: 25)
                     
-                    ProblemView(mathModel: mathModel, answerDisplay: $answerDisplay,fontSize: 50)
+                    ProblemView(mathModel: mathModel, answerDisplay: $answerDisplay,fontSize: 45)
                     
                     
                     TextField("Answer(tap for keyboard)", text: $mathModel.answerText).textFieldStyle(RoundedBorderTextFieldStyle()).padding().font(.custom("Arial", size: 25)).foregroundColor(Color.red)

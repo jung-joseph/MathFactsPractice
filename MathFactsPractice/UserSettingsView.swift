@@ -22,7 +22,7 @@ struct UserSettingsView: View {
         VStack{
             
             Button(action:{
-                userSettings.level = "Elementary"
+                userSettings.level = "Level 1"
                 userSettings.addMinNumber = 0
                 userSettings.addMaxNumber = 10
                 
@@ -38,7 +38,7 @@ struct UserSettingsView: View {
                 userSettings.printUserSettings()
                 
             },
-                   label: {Text("Elementary Level")})
+                   label: {Text("Level 1")})
             .background(Color.red)
             .foregroundColor(Color.white)
             .padding(.horizontal, 4)
@@ -48,7 +48,7 @@ struct UserSettingsView: View {
             .padding()
             
             Button(action:{
-                userSettings.level = "High School"
+                userSettings.level = "Level 2"
                 userSettings.addMinNumber = -12
                 userSettings.addMaxNumber = 12
                 
@@ -64,7 +64,7 @@ struct UserSettingsView: View {
                 userSettings.printUserSettings()
                 
             },
-                   label: {Text("High School Level")})
+                   label: {Text("Level 2")})
             .background(Color.green)
             .foregroundColor(Color.white)
             .padding(.horizontal, 4)
@@ -95,13 +95,13 @@ struct UserSettingsView: View {
             Spacer()
             
             Group{
-                Text("Elementary Level:")
+                Text("Level 1:")
                 Text("Addends, minuends, subtrahends, multiplicands, multipliers, divisors, and quotients are between 0 and 10.")
-                Text("In addition, the minuend is greater than or equal to the subtrahend so there are no negative differences.")
+                Text("The minuend is greater than or equal to the subtrahend so there are no negative differences.")
             }
             .foregroundColor(Color.red)
             Group{
-                Text("High School Level:")
+                Text("Level 2:")
                 Text("Addends, minuends, subtrahends, multiplicands, multipliers, divisors, and quotients are between -12 and 12.")
             }
             .foregroundColor(Color.green)

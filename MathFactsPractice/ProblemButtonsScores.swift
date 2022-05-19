@@ -97,6 +97,7 @@ struct ProblemButtonsScores: View {
                 
             }
         }
+        .padding(.top,10)
         
     }
 }

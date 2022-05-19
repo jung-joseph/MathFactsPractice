@@ -31,7 +31,29 @@ struct CustomSettingsView: View {
             
             Button("Done") {
                 userSettings.printUserSettings()
-                
+                // check userSettings
+                if userSettings.addMinNumber > userSettings.addMaxNumber {
+                    let temp = userSettings.addMinNumber
+                    userSettings.addMinNumber = userSettings.addMaxNumber
+                    userSettings.addMaxNumber = temp
+                }
+                if userSettings.subMinNumber > userSettings.subMaxNumber {
+                    let temp = userSettings.subMinNumber
+                    userSettings.subMinNumber = userSettings.subMaxNumber
+                    userSettings.subMaxNumber = temp
+                }
+                if userSettings.mulMinNumber > userSettings.mulMaxNumber {
+                    let temp = userSettings.mulMinNumber
+                    userSettings.mulMinNumber = userSettings.mulMaxNumber
+                    userSettings.mulMaxNumber = temp
+                }
+                if userSettings.divMinNumber > userSettings.divMaxNumber {
+                    let temp = userSettings.divMinNumber
+                    userSettings.divMinNumber = userSettings.divMaxNumber
+                    userSettings.divMaxNumber = temp
+                }
+                userSettings.printUserSettings()
+
                 dismiss()
             }
             .background(Color.green)
